@@ -29,8 +29,8 @@ save_steps = 100
 model_path = None # 'model425000.pth'
 device = 'cuda'
 # with open('data/metadata.json', 'rt') as f:
-with open("**.pickle", "rb") as f:
-    metadata = json.loads(f.read())
+with open("train_log/**.pickle", "rb") as f:
+    x = pickle.load(f)
 num_steps = metadata['sequence_length'] - INPUT_SEQUENCE_LENGTH
 normalization_stats = {
     'acceleration': {
